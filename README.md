@@ -59,7 +59,11 @@ Generator is responsible for actually generating the icon from the hash produced
 
 Any object can be a generator as long as it implements ```Bitverse\Identicon\Generator\GeneratorInterface```.
 
-```RingsGenerator``` is the only generator included in the library at the moment. It produces identicons made out of a centerpiece and three rings of different lengths and rotation.
+Currently the library provides two generators by default:
+
+- ```RingsGenerator``` produces identicons made out of a centerpiece and three rings of different lengths and rotation.
+
+- ```PixelsGenerator``` generates 5x5 pixels icons, similar to the ones used on github.
 
 ### Examples
 
@@ -68,3 +72,7 @@ Here are some examples for 'helloworld':
 - ```MD5Preprocessor``` + ```RingsGenerator```:
 
 ![MD5Preprocessor + RingsGenerator](https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_rings.svg)
+
+- ```MD5Preprocessor``` + ```PixelsGenerator```:
+
+![MD5Preprocessor + PixelsGenerator](https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_pixels.svg)

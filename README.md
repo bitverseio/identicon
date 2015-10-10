@@ -1,5 +1,7 @@
 ## PHP Identicon Generator
 
+[![Code Climate](https://codeclimate.com/github/bitverseio/identicon/badges/gpa.svg)](https://codeclimate.com/github/bitverseio/identicon) [![Test Coverage](https://codeclimate.com/github/bitverseio/identicon/badges/coverage.svg)](https://codeclimate.com/github/bitverseio/identicon/coverage)
+
 This is a PHP library which generates identicons based on a given string.
 Currently only SVG format is supported as it offers the best combination of efficiency, quality, file size and ease of use.
 

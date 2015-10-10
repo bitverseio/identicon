@@ -71,8 +71,8 @@ Here are some examples for 'helloworld':
 
 - ```MD5Preprocessor``` + ```RingsGenerator```:
 
-![MD5Preprocessor + RingsGenerator](https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_rings.svg)
+<img src="https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_rings.svg" width="200" />
 
 - ```MD5Preprocessor``` + ```PixelsGenerator```:
 
-![MD5Preprocessor + PixelsGenerator](https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_pixels.svg)
+<img src="https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_pixels.svg" width="200" />

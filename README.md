@@ -13,6 +13,7 @@ In order to use identicon in your project, add the following entry to your ```co
         "bitverse/identicon"
     }
 }
+```
 
 ### Usage
 
@@ -33,8 +34,6 @@ $identicon = new Identicon(new MD5Preprocessor(), $generator);
 $icon = $identicon->getIcon('hello world');
 
 file_put_contents('helloworld.svg', $icon);
-
-?>
 ```
 
 #### Identicon object

@@ -64,4 +64,4 @@ Here are some examples for 'helloworld':
 
 - ```MD5Preprocessor``` + ```RingsGenerator```:
 
-(https://raw.githubusercontent.com/bitverseio/identicon/master/docs/icons/md5_rings.svg)
+![MD5Preprocessor + RingsGenerator](https://cdn.rawgit.com/bitverseio/identicon/master/docs/icons/md5_rings.svg)

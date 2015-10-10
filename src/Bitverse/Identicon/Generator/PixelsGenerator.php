@@ -6,21 +6,8 @@ use Bitverse\Identicon\Color\Color;
 use Bitverse\Identicon\SVG\Svg;
 use Bitverse\Identicon\SVG\Rectangle;
 
-class PixelsGenerator implements GeneratorInterface
+class PixelsGenerator extends BaseGenerator
 {
-    /**
-     * @var Color
-     */
-    private $backgroundColor;
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setBackgroundColor(Color $color)
-    {
-        $this->backgroundColor = $color;
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -40,13 +27,27 @@ class PixelsGenerator implements GeneratorInterface
 
     }
 
+    /**
+     * Returns the background rectangle.
+     *
+     * @return SvgNode
+     */
     private function getBackground()
     {
         return (new Rectangle(0, 0, 480, 480))
-            ->setFillColor($this->backgroundColor)
+            ->setFillColor($this->getBackgroundColor())
             ->setStrokeWidth(0);
     }
 
+    /**
+     * Returns a pixel drawn accordingly to the passed parameters.
+     *
+     * @param integer $x
+     * @param integer $y
+     * @param Color $color
+     *
+     * @return SvgNode
+     */
     private function getPixel($x, $y, Color $color)
     {
         return (new Rectangle($x * 80 + 40, $y * 80 + 40, 80, 80))
@@ -54,20 +55,17 @@ class PixelsGenerator implements GeneratorInterface
             ->setStrokeWidth(0);
     }
 
+    /**
+     * Determines whether a pixel from the 5x5 grid should be visible.
+     *
+     * @param integer $x
+     * @param integer $y
+     * @param string $hash
+     *
+     * @return boolean
+     */
     private function showPixel($x, $y, $hash)
     {
         return hexdec(substr($hash, 6 + abs(2-$x) * 5 + $y, 1)) % 2 === 0;
-    }
-
-    /**
-     * Returns a unique color based on the hash.
-     *
-     * @param string $hash
-     *
-     * @return Color
-     */
-    private function getColor($hash)
-    {
-        return Color::parseHex('#' . substr($hash, 0, 6));
     }
 }

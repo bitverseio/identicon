@@ -7,25 +7,12 @@ use Bitverse\Identicon\SVG\Svg;
 use Bitverse\Identicon\SVG\Circle;
 use Bitverse\Identicon\SVG\Path;
 
-class RingsGenerator implements GeneratorInterface
+class RingsGenerator extends BaseGenerator
 {
     /**
      * @var integer
      */
     private $sideLength = 1000;
-
-    /**
-     * @var Color
-     */
-    private $backgroundColor;
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setBackgroundColor(Color $color)
-    {
-        $this->backgroundColor = $color;
-    }
 
     /**
      * {@inheritDoc}
@@ -65,7 +52,7 @@ class RingsGenerator implements GeneratorInterface
     private function getBackground()
     {
         return (new Circle($this->getX(), $this->getY(), $this->getRadius()))
-            ->setFillColor($this->backgroundColor)
+            ->setFillColor($this->getBackgroundColor())
             ->setStrokeWidth(0);
     }
 
@@ -237,17 +224,5 @@ class RingsGenerator implements GeneratorInterface
     public function showCenter($hash)
     {
         return hexdec(substr($hash, 24, 8)) % 2 === 0;
-    }
-
-    /**
-     * Returns a unique color based on the hash.
-     *
-     * @param string $hash
-     *
-     * @return Color
-     */
-    private function getColor($hash)
-    {
-        return Color::parseHex('#' . substr($hash, 0, 6));
     }
 }

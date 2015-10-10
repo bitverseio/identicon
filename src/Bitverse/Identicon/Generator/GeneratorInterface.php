@@ -3,7 +3,6 @@
 namespace Bitverse\Identicon\Generator;
 
 use Bitverse\Identicon\Color\Color;
-use Bitverse\Identicon\Hash\HashInterface;
 
 interface GeneratorInterface
 {

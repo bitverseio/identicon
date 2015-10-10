@@ -63,3 +63,5 @@ Any object can be a generator as long as it implements ```Bitverse\Identicon\Gen
 Here are some examples for 'helloworld':
 
 - ```MD5Preprocessor``` + ```RingsGenerator```:
+
+(https://raw.githubusercontent.com/bitverseio/identicon/master/docs/icons/md5_rings.svg)

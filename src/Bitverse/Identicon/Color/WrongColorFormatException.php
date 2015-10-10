@@ -17,7 +17,7 @@ class WrongColorFormatException extends \Exception
         $this->color = $color;
     }
 
-    public function getMassage()
+    public function getMessage()
     {
         return sprintf('"%s" is not a valid color format!', $this->color);
     }

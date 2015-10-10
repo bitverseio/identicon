@@ -10,7 +10,7 @@ In order to use identicon in your project, add the following entry to your ```co
 ```json
 {
     "require": {
-        "bitverse/identicon"
+        "bitverse/identicon": "*"
     }
 }
 ```

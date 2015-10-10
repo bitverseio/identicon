@@ -25,11 +25,12 @@ The code below, will create a rings-identicon from the string "hello world", and
 <?php
 
 use Bitverse\Identicon\Identicon;
+use Bitverse\Identicon\Color\Color;
 use Bitverse\Identicon\Generator\RingsGenerator;
 use Bitverse\Identicon\Preprocessor\MD5Preprocessor;
 
 $generator = new RingsGenerator();
-$generator->setBackgroundColor($bg);
+$generator->setBackgroundColor(Color::parseHex('#EEEEEE'));
 
 $identicon = new Identicon(new MD5Preprocessor(), $generator);
 

@@ -7,14 +7,10 @@ Currently only SVG format is supported as it offers the best combination of effi
 
 ### Installation
 
-In order to use identicon in your project, add the following entry to your ```composer.json``` file:
+Install using composer:
 
-```json
-{
-    "require": {
-        "bitverse/identicon": "*"
-    }
-}
+```
+$ composer require bitverse/identicon
 ```
 
 ### Usage

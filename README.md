@@ -5,6 +5,8 @@
 This is a PHP library which generates identicons based on a given string.
 Currently only SVG format is supported as it offers the best combination of efficiency, quality, file size and ease of use.
 
+For integration with a symfony application, there is [BitverseIdenticonBundle](https://github.com/bitverseio/BitverseIdenticonBundle)
+
 ### Installation
 
 Install using composer:

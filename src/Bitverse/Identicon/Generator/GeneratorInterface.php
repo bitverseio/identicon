@@ -9,9 +9,9 @@ interface GeneratorInterface
     /**
      * Sets the background color for the generated icons.
      *
-     * @param Color $color
+     * @param Color|string $color
      */
-    public function setBackgroundColor(Color $color);
+    public function setBackgroundColor($color);
 
     /**
      * Generates a unique icon

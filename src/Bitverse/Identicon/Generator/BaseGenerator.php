@@ -4,6 +4,10 @@ namespace Bitverse\Identicon\Generator;
 
 use Bitverse\Identicon\Color\Color;
 
+/**
+ * @todo A color factory should be injected allowing to pass
+ *       strings to setBackgroundColor
+ */
 abstract class BaseGenerator implements GeneratorInterface
 {
     /**
@@ -14,9 +18,14 @@ abstract class BaseGenerator implements GeneratorInterface
     /**
      * {@inheritDoc}
      */
-    public function setBackgroundColor(Color $color)
+    public function setBackgroundColor($color)
     {
-        $this->backgroundColor = $color;
+        if ($color instanceof Color) {
+            $this->backgroundColor = $color;
+            return;
+        }
+
+        $this->backgroundColor = Color::parseHex($color);
     }
 
     /**

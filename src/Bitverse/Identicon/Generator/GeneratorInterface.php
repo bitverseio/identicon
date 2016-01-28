@@ -14,6 +14,13 @@ interface GeneratorInterface
     public function setBackgroundColor($color);
 
     /**
+     * Sets the foreground color for the generated icons.
+     *
+     * @param Color|string $color
+     */
+    public function setForegroundColor($color);
+
+    /**
      * Generates a unique icon
      *
      * @param string $hash The hash to generate the icon from.

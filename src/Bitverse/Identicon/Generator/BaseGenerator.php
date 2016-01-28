@@ -16,6 +16,11 @@ abstract class BaseGenerator implements GeneratorInterface
     private $backgroundColor;
 
     /**
+     * @var Color
+     */
+    private $foregroundColor;
+
+    /**
      * {@inheritDoc}
      */
     public function setBackgroundColor($color)
@@ -29,6 +34,19 @@ abstract class BaseGenerator implements GeneratorInterface
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function setForegroundColor($color)
+    {
+        if ($color instanceof Color) {
+            $this->foregroundColor = $color;
+            return;
+        }
+
+        $this->foregroundColor = Color::parseHex($color);
+    }
+
+    /**
      * Returns the background color.
      *
      * @return Color
@@ -36,6 +54,16 @@ abstract class BaseGenerator implements GeneratorInterface
     public function getBackgroundColor()
     {
         return $this->backgroundColor;
+    }
+
+    /**
+     * Returns the background color.
+     *
+     * @return Color
+     */
+    public function getForegroundColor()
+    {
+        return $this->foregroundColor;
     }
 
     /**

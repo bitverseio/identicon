@@ -15,7 +15,7 @@ class PixelsGenerator extends BaseGenerator
     {
         $svg = (new Svg(480, 480))->addChild($this->getBackground());
 
-        $fg_color = $this->foregroundColor;
+        $fg_color = $this->getForegroundColor();
         if (!$fg_color) $fg_color = $this->getColor($hash);
 
         for ($i=0; $i<5; ++$i) {

@@ -26,11 +26,16 @@ class RingsGenerator extends BaseGenerator
         if ($this->showCenter($hash)) {
             $svg->addChild($this->getCenter($this->getColor($hash)));
         }
-
+        
+        $fgColor = $this->getForegroundColor();
+        if (!$fgColor) { 
+            $fgColor = $this->getColor($hash);
+        }
+          
         for ($i=1; $i<4; ++$i) {
             $svg->addChild(
                 $this->getArc(
-                    $this->getColor($hash),
+                    $fgColor,
                     $this->getX(),
                     $this->getY(),
                     $this->getRingRadius($i),

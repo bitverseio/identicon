@@ -15,13 +15,15 @@ class PixelsGenerator extends BaseGenerator
     {
         $svg = (new Svg(480, 480))->addChild($this->getBackground());
 
-        $fg_color = $this->getForegroundColor();
-        if (!$fg_color) $fg_color = $this->getColor($hash);
+        $fgColor = $this->getForegroundColor();
+        if (!$fgColor) {
+            $fgColor = $this->getColor($hash);
+        }
 
         for ($i=0; $i<5; ++$i) {
             for ($j=0; $j<5; ++$j) {
                 if ($this->showPixel($i, $j, $hash)) {
-                    $svg->addChild($this->getPixel($i, $j, $fg_color));
+                    $svg->addChild($this->getPixel($i, $j, $fgColor));
                 }
             }
         }

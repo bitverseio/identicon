@@ -28,7 +28,7 @@ class RingsGenerator extends BaseGenerator
         }
         
         $fg_color = $this->foregroundColor;
-        if (!$fg_color) $fg_ color = $this->getColor($hash);
+        if (!$fg_color) $fg_color = $this->getColor($hash);
           
         for ($i=1; $i<4; ++$i) {
             $svg->addChild(

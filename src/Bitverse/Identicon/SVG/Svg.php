@@ -35,7 +35,9 @@ class Svg extends SvgNode
     {
         return sprintf(
             '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" ' .
-                'width="%d" height="%d">%s</svg>',
+                'width="%d" height="%d" viewBox="0 0 %d %d">%s</svg>',
+            $this->width,
+            $this->height,
             $this->width,
             $this->height,
             implode('', array_map(function ($node) {
